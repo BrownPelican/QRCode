@@ -2,6 +2,13 @@ import cv2
 from pyzbar import pyzbar
 
 from kivymd.app import MDApp
+from android.permissions import request_permissions, Permission
+
+request_permissions([
+            Permission.CAMERA,
+            Permission.WRITE_EXTERNAL_STORAGE,
+            Permission.READ_EXTERNAL_STORAGE
+        ])
 
 class MainApp(MDApp):
 
